@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable="no">
+    <title>Turn-Based Attack Game</title>
+    <link rel="stylesheet" href="Designer-Animations.css"></link>
+    
+</head>
+<body>
+
+    <div class="menu container">
+        <h1>Welcome to Turn-Based Attack Game</h1>
+        <p>(beta)</p>
+        <button onclick="singleplayerGame()">Single Player</button>
+        <button onclick="multiplayerGame()">Multi Player</button>
+    </div>
+
+        <div id="multiplayer">
+
+        <div class="overlay">
+            <button class="overlay-content" id="Resume" onclick="resume()">Resume</button>
+            <button class="overlay-content" id="Retry" onclick="retry()">Retry</button>
+            <button class="overlay-content" id="Quit" onclick="quit()">Quit</button>
+        </div>
+        
+        <div class="row2">
+            <img id="settings-img" src="Settings.jpeg" alt="Settings" onclick="settings()">
+            <h2 id="game-firsttoattack"></h2><br><br><br><br><br>
+        </div>
+
+        <div class="row">
+            <h2>PLAYER 1</h2>
+            <h2>PLAYER 2</h2>
+        </div>
+
+        <div class="row">
+            <img id="player1-img" src="videogame-indiegame.gif" alt="Player 1">
+            <img id="player2-img" src="poring-ragnarok.gif" alt="Player 2">
+        </div>
+
+        <div class="row">
+            <p id="game-turn2"></p>
+            <p id="game-turn1"></p>
+        </div><br>
+
+        <div class="row">
+            <p>Player 1 HP: <span id="player1-hp">50</span> <span id="player1-block"></span></p>
+            <p>Player 2 HP: <span id="player2-hp">50</span> <span id="player2-block"></span></p>
+        </div>
+        
+        <div class="row1">
+        <button id="attack-button" onclick="attack()">Attack <span id="damageturns"></span> </button>
+        <button id="heal-button" onclick="heal()">Heal <span id="healturns"></span> </button>
+        <button id="block-button" onclick="blocks()">Block <span id="blockturns"></span> </button>
+        </div>
+
+        <div class="row1"></div>
+            <p id="game-announcer"></p>
+            <p id="game-result"></p>
+        </div>
+    
+    </div>
+
+    <script src="Main-Game.js"> </script>
+
+</body>
+</html>
