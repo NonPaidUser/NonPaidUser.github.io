@@ -432,7 +432,7 @@ function blocks() {
 
 }
 
-function settings(){
+function setting(){
     document.querySelector('.overlay').style.display = 'block';
 }
 
