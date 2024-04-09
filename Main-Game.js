@@ -6,6 +6,14 @@ function multiplayerGame() {
     player2hp.innerText = 50;
     blockp1 = 0;
     blockp2 = 0;
+    currentPlayer = Math.floor(Math.random()*2)+1;
+    document.getElementById('game-firsttoattack').innerText = "Player " + currentPlayer + " first to attack!";
+    if (currentPlayer===1){
+        gameturn2.innerText = "Turn to hit!";
+    }
+    else {
+        gameturn1.innerText = "Turn to hit!";
+    }
 }
 
 function retry(){
@@ -16,6 +24,14 @@ function retry(){
     blockp2 = 0;
     blockP1.innerText = "";
     blockP2.innerText = "";
+    currentPlayer = Math.floor(Math.random()*2)+1;
+    document.getElementById('game-firsttoattack').innerText = "Player " + currentPlayer + " first to attack!";
+    if (currentPlayer===1){
+        gameturn2.innerText = "Turn to hit!";
+    }
+    else {
+        gameturn1.innerText = "Turn to hit!";
+    }
 }
 
 var player1hp = document.getElementById('player1-hp');
